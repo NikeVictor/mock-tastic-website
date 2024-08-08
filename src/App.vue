@@ -1,30 +1,66 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { ref } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+
+const route = useRoute()
+const router = useRouter()
+
+const activeLink = ref(route.path)
+const activeColor = ref('#007bff')
+
+const handleLinkClick = (path) => {
+  if (path === '/contact') {
+    activeLink.value = path
+    activeColor.value = '#007bff'
+    scrollToContact()
+  } else {
+    activeLink.value = path
+    activeColor.value = '#007bff' // Reset the active color
+    router.push(path)
+  }
+}
+
+const scrollToContact = () => {
+  const contactForm = document.getElementById('contact-form')
+  if (contactForm) {
+    contactForm.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 </script>
 
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="../public/mocktastic_logo.jpg" width="100" height="100" />
     <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/What we do">What we do</RouterLink>
-        <a @click="scrollToContact">Contact us</a>
-      </nav>
+      <a
+        @click="handleLinkClick('/')"
+        :style="{ color: activeLink === '/' ? activeColor : '#333' }"
+        class="nav-link"
+      >
+        Home
+      </a>
+      <a
+        @click="handleLinkClick('/what-we-do')"
+        :style="{ color: activeLink === '/what-we-do' ? activeColor : '#333' }"
+        class="nav-link"
+      >
+        What we do
+      </a>
+      <a
+        @click="handleLinkClick('/contact')"
+        :style="{ color: activeLink === '/contact' ? activeColor : '#333' }"
+        class="nav-link"
+      >
+        Contact us
+      </a>
+    </nav>
   </header>
   <RouterView />
+  <div id="contact-form">
+    <!-- Your contact form content goes here -->
+  </div>
 </template>
-<script>
-export default {
-  methods: {
-    scrollToContact() {
-      const contactForm = document.getElementById('contact-form');
-      if (contactForm) {
-        contactForm.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }
-}
-</script>
+
 <style scoped>
 header {
   line-height: 1.5;
@@ -63,19 +99,12 @@ nav {
   margin-right: 80px;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
 nav a {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
   text-decoration: none;
+  cursor: pointer;
 }
 
 nav a:first-of-type {
@@ -103,12 +132,8 @@ nav a:first-of-type {
     text-align: left;
     margin-left: -1rem;
     font-size: 1rem;
-
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
-a {
-  cursor: pointer;
 }
 </style>
