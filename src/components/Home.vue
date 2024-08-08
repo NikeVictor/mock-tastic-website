@@ -67,7 +67,6 @@
 <script>
 import axios from 'axios'
 export default {
-  name: 'HomePage',
   data() {
     return {
       backgroundImages: [
@@ -82,13 +81,13 @@ export default {
   },
   methods: {
     startJourney() {
-      axios
-        .post('http://localhost:3000/create-payment', {
-          // name: 'John Doe',
-          // email: 'johndoe@example.com'
-        })
+      axios.post('http://localhost:3000/create-payment', {
+        // name: 'John Doe',
+        // email: 'johndoe@example.com'
+      })
+      window.location.href = response.data.forwardLink
         .then((response) => {
-          window.location.href = response.data.forwardLink
+          console.log(response.data)
           // Handle the response from the backend endpoint
         })
         .catch((error) => {
