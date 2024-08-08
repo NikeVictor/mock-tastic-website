@@ -13,6 +13,9 @@ const handleLinkClick = (path) => {
     activeLink.value = path
     activeColor.value = '#007bff'
     scrollToContact()
+    if (path === '/about')
+    activeLink.value = path
+    activeColor.value = '#007bff'
   } else {
     activeLink.value = path
     activeColor.value = '#007bff' // Reset the active color
@@ -40,8 +43,8 @@ const scrollToContact = () => {
         Home
       </a>
       <a
-        @click="handleLinkClick('/what-we-do')"
-        :style="{ color: activeLink === '/what-we-do' ? activeColor : '#333' }"
+        @click="handleLinkClick('/about')"
+        :style="{ color: activeLink === '/about' ? activeColor : '#333' }"
         class="nav-link"
       >
         What we do
