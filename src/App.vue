@@ -12,10 +12,10 @@ const handleLinkClick = (path) => {
   if (path === '/contact') {
     activeLink.value = path
     activeColor.value = '#007bff'
-    scrollToContact()
-    if (path === '/about')
-    activeLink.value = path
-    activeColor.value = '#007bff'
+    router.push('/')
+    setTimeout(() => {
+      scrollToContact()
+    }, 500) // wait for 500ms before scrolling to contact section
   } else {
     activeLink.value = path
     activeColor.value = '#007bff' // Reset the active color
