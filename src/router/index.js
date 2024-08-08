@@ -11,21 +11,21 @@ const router = createRouter({
       component: Home
     },
     {
-      path: '/What we do',
+      path: '/about',
       name: 'about',
       component: About
     }
   ],
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(to) {
     if (to.hash) {
       return {
         el: to.hash,
-        behavior: 'mooth',
+        behavior: 'mooth'
       }
     } else {
       return { top: 0 }
     }
-  },
+  }
 })
 
 export default router
