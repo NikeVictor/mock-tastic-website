@@ -48,17 +48,17 @@
       <h2>Contact Us</h2>
       <form>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" /><br /><br />
+        <input type="text" id="name" name="name" v-model="name"/><br /><br />
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" /><br /><br />
-        <label for="sel1" class="form-label">Select exam/specialty:</label>
-        <select class="form-select" id="sel1" name="sellist">
+        <input type="email" id="email" name="email" v-model="email"/><br /><br />
+        <label for="exam" class="exam">Select exam/specialty:</label>
+        <select class="exam" id="exam" name="exam" v-model="exam">
           <option>MRCEM OSCE</option>
           <option>USMLE CK</option>
           <option>PLAB 2</option>
           <option>MCCQE 2</option></select
         ><br /><br />
-        <button type="submit">Send</button>
+        <button type="submit" @click="sendContact">Send</button>
       </form>
     </div>
   </div>
@@ -77,7 +77,10 @@ export default {
         '/public/carousel_two.jpg'
       ],
       currentIndex: 0,
-      price: 10.0
+      price: 10.0,
+      name: '',
+      email: '',
+      exam: ''
     }
   },
   methods: {
@@ -94,6 +97,14 @@ export default {
         .catch((error) => {
           console.error(error)
           // Handle any errors that occur
+        })
+    },
+    sendContact(){
+      axios
+        .post('http://localhost:3000/contact', {
+          name: this.name,
+          email: this.email,
+          exam: this.exam
         })
     },
     prevSlide() {

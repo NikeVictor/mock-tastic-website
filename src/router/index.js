@@ -1,5 +1,7 @@
 import About from '@/components/About.vue'
+import Cancel from '@/components/Cancel.vue'
 import Home from '@/components/Home.vue'
+import Success from '@/components/Success.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -14,6 +16,16 @@ const router = createRouter({
       path: '/about',
       name: 'about',
       component: About
+    },
+    {
+      path: '/success',
+      name: 'success',
+      component: Success
+    },
+    {
+      path: '/cancel',
+      name: 'cancel',
+      component: Cancel
     }
   ],
   scrollBehavior(to) {
