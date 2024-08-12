@@ -12,6 +12,7 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: 'dist' // Set the output directory to 'dist'
+    outDir: 'dist',
+    ignore: ['public/mocktastic_logo.JPG']
   }
 })

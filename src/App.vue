@@ -33,7 +33,13 @@ const scrollToContact = () => {
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="../public/mocktastic_logo.jpg" width="100" height="100" />
+    <img
+      alt="Vue logo"
+      class="logo"
+      src="../src/assets/mocktastic_logo.JPG"
+      width="100"
+      height="100"
+    />
     <nav>
       <a
         @click="handleLinkClick('/')"
