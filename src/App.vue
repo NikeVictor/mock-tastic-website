@@ -36,7 +36,7 @@ const scrollToContact = () => {
     <img
       alt="Vue logo"
       class="logo"
-      src="../src/assets/mocktastic_logo.JPG"
+      src="../src/assets/mocktastic_logo.jpg"
       width="100"
       height="100"
     />
