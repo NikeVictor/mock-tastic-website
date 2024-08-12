@@ -48,9 +48,9 @@
       <h2>Contact Us</h2>
       <form>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" v-model="name"/><br /><br />
+        <input type="text" id="name" name="name" v-model="name" /><br /><br />
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" v-model="email"/><br /><br />
+        <input type="email" id="email" name="email" v-model="email" /><br /><br />
         <label for="exam" class="exam">Select exam/specialty:</label>
         <select class="exam" id="exam" name="exam" v-model="exam">
           <option>MRCEM OSCE</option>
@@ -71,10 +71,10 @@ export default {
   data() {
     return {
       backgroundImages: [
-        '/public/carousel_one2.jpg',
-        '/public/carousel_one.jpg',
-        '/public/carousel_three.jpg',
-        '/public/carousel_two.jpg'
+        '/carousel_one2.jpg',
+        '/carousel_one.jpg',
+        '/carousel_three.jpg',
+        '/carousel_two.jpg'
       ],
       currentIndex: 0,
       price: 10.0,
@@ -99,13 +99,12 @@ export default {
           // Handle any errors that occur
         })
     },
-    sendContact(){
-      axios
-        .post('http://localhost:3000/contact', {
-          name: this.name,
-          email: this.email,
-          exam: this.exam
-        })
+    sendContact() {
+      axios.post('http://localhost:3000/contact', {
+        name: this.name,
+        email: this.email,
+        exam: this.exam
+      })
     },
     prevSlide() {
       this.currentIndex =
