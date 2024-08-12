@@ -46,7 +46,7 @@ export default {
   methods: {
     async executePayment(paymentId, payerId) {
       try {
-        const response = await axios.post('http://localhost:3000/success', {
+        const response = await axios.post('https://mocktastic-backend.onrender.com/success', {
           paymentId,
           payerId
         })

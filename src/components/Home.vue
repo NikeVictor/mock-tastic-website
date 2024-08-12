@@ -86,7 +86,7 @@ export default {
   methods: {
     startJourney() {
       axios
-        .post('http://localhost:3000/create-payment', {
+        .post('https://mocktastic-backend.onrender.com/create-payment', {
           // name: 'John Doe',
           // email: 'johndoe@example.com'
         })
@@ -100,7 +100,7 @@ export default {
         })
     },
     sendContact() {
-      axios.post('http://localhost:3000/contact', {
+      axios.post('https://mocktastic-backend.onrender.com/contact', {
         name: this.name,
         email: this.email,
         exam: this.exam
