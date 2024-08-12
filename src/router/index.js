@@ -39,5 +39,5 @@ const router = createRouter({
     }
   }
 })
-router.fallback(true)
+
 export default router

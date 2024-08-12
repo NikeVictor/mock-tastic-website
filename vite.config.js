@@ -14,9 +14,5 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     ssg: true
-  },
-  render: {
-    spa: true,
-    fallback: 'index.html'
   }
 })
