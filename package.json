@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "serve-prod": "serve dist"
+    "serve-prod": "serve dist -s"
   },
   "dependencies": {
     "axios": "^1.7.3",
