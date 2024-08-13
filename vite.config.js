@@ -12,7 +12,6 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: 'dist',
-    ssg: true
+    outDir: 'dist'
   }
 })
