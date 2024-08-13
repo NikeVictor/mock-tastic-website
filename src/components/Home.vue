@@ -87,7 +87,6 @@ export default {
     startJourney() {
       axios
         .post('https://mocktastic-backend.onrender.com/create-payment', {
-          // name: 'John Doe',
           // email: 'johndoe@example.com'
         })
         .then((response) => {

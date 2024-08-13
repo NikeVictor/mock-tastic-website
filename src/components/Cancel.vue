@@ -1,5 +1,18 @@
+<style scoped>
+.payment-status {
+  text-align: center;
+  margin-top: 50px; /* move the payment status down by 20px */
+}
+
+.payment-status p {
+  font-size: 18px; /* adjust the font size to your liking */
+  font-weight: bold; /* make the text bold */
+  color: #333; /* adjust the text color to your liking */
+}
+</style>
+
 <template>
-  <div>
+  <div class="payment-status">
     <h1>Payment Status</h1>
     <p>Your payment was canceled.</p>
     <router-link to="/">Go back to the homepage</router-link>
