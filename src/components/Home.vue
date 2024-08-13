@@ -301,4 +301,52 @@ button[type='submit']:hover {
 .btn:hover {
   background-color: #fff;
 }
+
+@media (max-width: 768px) {
+  .carousel {
+    width: 100%;
+  }
+  .contact-form {
+    max-width: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .background-image {
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-nav {
+    top: 20px;
+    left: 20px;
+  }
+  .prev,
+  .next {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .welcome-message {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 768px) {
+  .pricing-table {
+    font-size: 16px;
+  }
+  .pricing-table ul {
+    padding: 0;
+  }
+  .pricing-table li {
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .btn {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+}
 </style>
