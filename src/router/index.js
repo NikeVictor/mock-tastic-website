@@ -21,6 +21,7 @@ const router = createRouter({
       path: '/success',
       name: 'success',
       component: Success
+      //props: (route) => ({ query: route.query })
     },
     {
       path: '/cancel',
