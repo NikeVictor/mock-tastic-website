@@ -44,22 +44,24 @@
         <button class="next" @click="nextSlide">&rsaquo;</button>
       </div>
     </div>
-    <div class="contact-form" id="contact-form">
-      <h2>Contact Us</h2>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" v-model="name" /><br /><br />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" v-model="email" /><br /><br />
-        <label for="exam" class="exam">Select exam/specialty:</label>
-        <select class="exam" id="exam" name="exam" v-model="exam">
-          <option>MRCEM OSCE</option>
-          <option>USMLE CK</option>
-          <option>PLAB 2</option>
-          <option>MCCQE 2</option></select
-        ><br /><br />
-        <button type="submit" @click="sendContact">Send</button>
-      </form>
+    <div class="contact-container">
+      <div class="contact-form" id="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" v-model="name" /><br /><br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" v-model="email" /><br /><br />
+          <label for="exam" class="exam">Select exam/specialty:</label>
+          <select class="exam" id="exam" name="exam" v-model="exam">
+            <option>MRCEM OSCE</option>
+            <option>USMLE CK</option>
+            <option>PLAB 2</option>
+            <option>MCCQE 2</option></select
+          ><br /><br />
+          <button type="submit" @click="sendContact">Send</button>
+        </form>
+      </div>
     </div>
   </div>
 </template>
@@ -222,6 +224,9 @@ export default {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
+.contact-container {
+  background-color: #f7f7f7;
+}
 
 label {
   display: block;
@@ -302,7 +307,7 @@ button[type='submit']:hover {
   background-color: #fff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1084px) {
   .carousel {
     width: 100%;
   }
@@ -310,13 +315,13 @@ button[type='submit']:hover {
     max-width: 300px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1084px) {
   .background-image {
     background-size: cover;
     background-position: center;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1084px) {
   .carousel-nav {
     top: 20px;
     left: 20px;
@@ -326,13 +331,13 @@ button[type='submit']:hover {
     font-size: 18px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1084px) {
   .welcome-message {
     font-size: 18px;
     line-height: 1.2;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1084px) {
   .pricing-table {
     font-size: 16px;
   }
@@ -343,10 +348,79 @@ button[type='submit']:hover {
     padding: 10px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1084px) {
   .btn {
     padding: 10px 15px;
     font-size: 16px;
+  }
+}
+/* Media query for tablet landscape */
+@media only screen and (max-width: 1024px) {
+  .welcome-message {
+    max-width: 600px;
+  }
+  .welcome-message h1 {
+    font-size: 30px;
+  }
+  .welcome-message h2 {
+    font-size: 20px;
+  }
+  .welcome-message p {
+    font-size: 16px;
+  }
+}
+
+/* Media query for tablet portrait */
+@media only screen and (max-width: 768px) {
+  .welcome-message {
+    max-width: 400px;
+  }
+  .welcome-message h1 {
+    font-size: 24px;
+  }
+  .welcome-message h2 {
+    font-size: 18px;
+  }
+  .welcome-message p {
+    font-size: 14px;
+  }
+}
+
+/* Media query for mobile landscape */
+@media only screen and (max-width: 480px) {
+  .welcome-message {
+    max-width: 300px;
+  }
+  .welcome-message h1 {
+    font-size: 20px;
+  }
+  .welcome-message h2 {
+    font-size: 16px;
+  }
+  .welcome-message p {
+    font-size: 12px;
+  }
+  .pricing-table button {
+    font-size: 14px;
+  }
+}
+
+/* Media query for mobile portrait */
+@media only screen and (max-width: 320px) {
+  .welcome-message {
+    max-width: 250px;
+  }
+  .welcome-message h1 {
+    font-size: 18px;
+  }
+  .welcome-message h2 {
+    font-size: 14px;
+  }
+  .welcome-message p {
+    font-size: 10px;
+  }
+  .pricing-table button {
+    font-size: 12px;
   }
 }
 </style>

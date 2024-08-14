@@ -43,21 +43,21 @@ const scrollToContact = () => {
     <nav>
       <a
         @click="handleLinkClick('/')"
-        :style="{ color: activeLink === '/' ? activeColor : '#333' }"
+        :style="{ color: activeLink === '/' ? activeColor : 'white' }"
         class="nav-link"
       >
         Home
       </a>
       <a
         @click="handleLinkClick('/about')"
-        :style="{ color: activeLink === '/about' ? activeColor : '#333' }"
+        :style="{ color: activeLink === '/about' ? activeColor : 'white' }"
         class="nav-link"
       >
         What we do
       </a>
       <a
         @click="handleLinkClick('/contact')"
-        :style="{ color: activeLink === '/contact' ? activeColor : '#333' }"
+        :style="{ color: activeLink === '/contact' ? activeColor : 'white' }"
         class="nav-link"
       >
         Contact us
@@ -114,13 +114,14 @@ nav a {
   border-left: 1px solid var(--color-border);
   text-decoration: none;
   cursor: pointer;
+  color: white;
 }
 
 nav a:first-of-type {
   border: 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 400px) {
   header {
     display: flex;
     place-items: center;
@@ -128,7 +129,7 @@ nav a:first-of-type {
   }
 
   .logo {
-    margin: 0 2rem 0 0;
+    margin: 0 0rem 0 30px;
   }
 
   header .wrapper {
@@ -143,6 +144,14 @@ nav a:first-of-type {
     font-size: 1rem;
     padding: 1rem 0;
     margin-top: 1rem;
+  }
+  .navbar-toggler {
+    order: 0;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 </style>

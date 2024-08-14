@@ -9,6 +9,45 @@
   font-weight: bold; /* make the text bold */
   color: #333; /* adjust the text color to your liking */
 }
+
+/* Small screens (mobile) */
+@media only screen and (max-width: 600px) {
+  .payment-status {
+    margin-top: 20px; /* reduce margin top on small screens */
+  }
+  .payment-status h1 {
+    font-size: 20px; /* reduce font size on small screens */
+  }
+  .payment-status p {
+    font-size: 16px; /* reduce font size on small screens */
+  }
+}
+
+/* Medium screens (tablet) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .payment-status {
+    margin-top: 30px; /* adjust margin top on medium screens */
+  }
+  .payment-status h1 {
+    font-size: 22px; /* adjust font size on medium screens */
+  }
+  .payment-status p {
+    font-size: 18px; /* adjust font size on medium screens */
+  }
+}
+
+/* Large screens (desktop) */
+@media only screen and (min-width: 901px) {
+  .payment-status {
+    margin-top: 50px; /* restore original margin top on large screens */
+  }
+  .payment-status h1 {
+    font-size: 24px; /* restore original font size on large screens */
+  }
+  .payment-status p {
+    font-size: 18px; /* restore original font size on large screens */
+  }
+}
 </style>
 
 <template>
