@@ -1,35 +1,8 @@
-# mock-tastic-website
+A responsive website designed to help medical students prepare for their clinical exams with confidence. The website features a welcome message, a brief introduction to the exam prep service, and a call-to-action to start the journey to success.
 
-This template should help get you started developing with Vue 3 in Vite.
+Features:
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Responsive design for optimal viewing on desktop, tablet, and mobile devices
+Clear and concise welcome message and introduction to the exam prep service
+Prominent call-to-action button to encourage users to start their journey
+Pricing information and secure payment option via PayPal
